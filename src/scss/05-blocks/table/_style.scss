@@ -1,0 +1,40 @@
+table,
+.wp-block-table {
+    width: 100%;
+    min-width: 240px;
+    border-collapse: collapse;
+
+    td,
+    th {
+        padding: 0.5em 1em;
+        border: 1px solid;
+    }
+
+    th {
+        border-bottom-width: 3px;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.875em;
+        padding: 0.5em;
+        font-style: italic;
+    }
+
+    &.is-style-stripes {
+        border-bottom: none;
+        td { border: none; }
+        th {
+            border: none;
+            border-bottom: 3px solid currentColor;
+            text-align: left;
+        }
+        tbody tr:nth-child(even){
+            background-color: var(--color--white);
+        }
+        tbody tr:nth-child(odd){
+            background-color: var(--color--grey);
+            color: var(--color--foreground);
+        }
+    }
+}

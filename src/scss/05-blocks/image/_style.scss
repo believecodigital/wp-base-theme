@@ -1,0 +1,11 @@
+.wp-block-image {
+    text-align: center;
+
+    figcaption {
+        color: currentColor;
+		font-size: var(--font-size--sm);
+		margin-top: var(--space--text);
+		margin-bottom: var(--space--text);
+		text-align: center;
+	}
+}

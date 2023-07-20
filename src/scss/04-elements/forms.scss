@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+label {
+  color: var(--form--color-text);
+  font-size: var(--form--font-size);
+  font-weight: var(--form--font-weigh);
+  font-family: var(----form--font-family);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+
+  color                 : var(--form--field-color-text);
+  background-color      : var(--form--field-color-background);
+  border                : var(--form--border); 
+  border-radius         : var(--form--border-radius);
+  padding               : var(--form--field-padding-vertical) var(--form--field-padding-horizontal);
+  width                 : 100%;
+  font-family           : var(--form--field-font-family) ;
+  font-size             : var(--form--field-font-size);
+
+  &:focus {
+    border-color: var(--form--field-border-color-focus);
+    background-color: var(--form--field-color-background-focus);
+  }
+
+  &:disabled {
+    background-color: lightgray;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,16 @@
+.wp-block-spacer {
+  &.is-style-responsive-large {
+     height: var(--space--lg) !important;
+  }
+
+  &.is-style-responsive-medium {
+     height: var(--space--md) !important;
+  }
+
+  &.is-style-responsive-small {
+     height: var(--space--sm) !important;
+  }
+  &.is-style-responsive-xsmall {
+     height: var(--space--xs) !important;
+  }
+}

@@ -1,0 +1,24 @@
+/**
+* These styles should be loaded by the Block Editor only
+*/
+@import "01-settings/fonts";
+@import "01-settings/global";
+
+@import "02-tools/mixins";
+@import "02-tools/functions";
+
+@import "03-generic/breakpoints";
+
+
+@import "04-elements/paragraph.scss";
+
+@import "05-blocks/blocks-editor.scss";
+
+@import "07-utilities/color-palette";
+
+
+
+div.editor-styles-wrapper[data-widget-area-id='footer'] {
+  color: white;
+  background-color: black;
+}

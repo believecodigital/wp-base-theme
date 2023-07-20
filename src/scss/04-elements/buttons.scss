@@ -1,0 +1,10 @@
+button { 
+	min-height: 44px;
+	min-width: 44px;
+}
+
+.button, 
+.btn, 
+input[type="submit"] {
+	@include button-style;
+}

@@ -1,0 +1,29 @@
+.sr-only,
+.visually-hidden,
+.focus-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.focus-only:focus {
+  position: initial;
+  width: auto;
+  height: auto;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
+}

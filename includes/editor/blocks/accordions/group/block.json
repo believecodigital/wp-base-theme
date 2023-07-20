@@ -1,0 +1,18 @@
+{
+    "apiVersion": 2,
+    "name" : "accordion-group",
+    "title": "Accordions",
+    "description": "A group of accordion blocks",
+    "category": "media",
+    "icon": {
+        "foreground": "#f75255",
+        "src": "table-col-before"
+    },
+    "keywords": ["expand"],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "accordion-group.php"
+    },
+    "viewScript": "file:./accordion-group.js",
+    "style": "file:./accordion-group.css"
+}

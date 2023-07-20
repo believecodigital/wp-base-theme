@@ -1,0 +1,95 @@
+/**
+ * Responsive Styles
+ */
+ :root {
+ --bs-gutter-x: 0;
+ }
+ $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+ $container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1280px
+);
+
+
+// Responsive breakpoints mixin
+$breakpoint_sm:  576px;  // xs 
+$breakpoint_md:  796px;  // sm
+$breakpoint_lg:  992px;  // md
+$breakpoint_xl:  1200px; // lg
+$breakpoint_xxl: 1400px; // xl
+
+@mixin media( $res ) {
+
+	@if small-down == $res {
+		@media only screen and (max-width: #{$breakpoint_sm - 1}) {
+			@content;
+		}
+	}
+
+	@if small == $res {
+		@media only screen and (min-width: #{$breakpoint_sm}) {
+			@content;
+		}
+	}
+
+	@if medium-down == $res {
+		@media only screen and (max-width: #{$breakpoint_md - 1}) {
+			@content;
+		}
+	}
+
+	@if medium == $res {
+		@media only screen and (min-width: #{$breakpoint_md}) {
+			@content;
+		}
+	}
+
+	@if large-down == $res {
+		@media only screen and (max-width: #{$breakpoint_lg - 1}) {
+			@content;
+		}
+	}
+
+	@if large == $res {
+		@media only screen and (min-width: #{$breakpoint_lg}) {
+			@content;
+		}
+	}
+
+	@if xlarge-down == $res {
+		@media only screen and (max-width: #{$breakpoint_xl - 1}) {
+			@content;
+		}
+	}
+
+	@if xlarge == $res {
+		@media only screen and (min-width: #{$breakpoint_xl}) {
+			@content;
+		}
+	}
+
+	@if xxlarge-down == $res {
+		@media only screen and (max-width: #{$breakpoint_xxl - 1}) {
+			@content;
+		}
+	}
+
+	@if xxlarge == $res {
+		@media only screen and (min-width: #{$breakpoint_xxl}) {
+			@content;
+		}
+	}
+}
+
+

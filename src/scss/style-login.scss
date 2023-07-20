@@ -1,0 +1,139 @@
+/*
+ * Use the 'login_enqueue_scripts' action to enqueue the
+ * resulting .css file to the login page.
+ */
+ @import "01-settings/fonts";
+ @import "01-settings/global";
+
+ body { 
+  background: var(--color--primary); 
+  background-position: center;
+  background-size: cover;
+  font-family: var(--font--primary); 
+ }
+
+ body.login { position: relative; }
+ 
+ //------------- 
+ // CONTAINER 
+ //-------------
+ .login:not(.interim-login) #login {
+  transform: translateY(-50%);
+ }
+
+ #login {
+   background-color: var(--bg-color--base);
+   position: relative;
+   top: 50%;
+   padding: 0rem;
+   width: 100%;
+   max-width: 400px;
+   box-shadow: 1px 1px 12px rgba(0,0,0, 0.3);
+ }
+ 
+ //-------------
+ // CONTENT 
+ //-------------
+ .login {
+
+    .privacy-policy-page-link {
+      margin: 0;
+      padding-bottom: 0.5rem;
+      // background-color: var(--bg-color--medium);
+    }
+
+     /*
+     ** Logo
+     */
+    //  h1 { background-color: var(--bg-color--dark); } 
+     h1 a {
+       background-size: 300px; 
+       margin: 0 auto;
+       width: 300px; height: 50px;
+       background-position: center;
+       padding: 1rem;
+     }
+ 
+     /*
+     ** Form
+     */
+     form {
+       background: transparent;
+       border: none;
+      //  label { color: white; }
+       .input {
+         box-shadow: none !important;
+         border-radius: 0;
+       }
+      //  .forgetmenot { } 
+      //  .forgetmenot label { color: white; }   
+       input[type=checkbox] { box-shadow: none; } 
+     }
+     
+     /*
+     ** Footer 
+     */
+    //  #nav { }
+    //  #backtoblog {}
+    //  #backtoblog, #nav {}  
+     #backtoblog, #nav {
+       margin: 0;
+       padding-top: 0.5rem;
+       padding-bottom: 0.5rem;
+       background-color: var(--bg-color--light); 
+     }
+     #backtoblog a, #nav a { 
+      //  color: white; 
+       &:hover { color: var(--color--dark-accent); }
+     } 
+ 
+ 
+     /*
+     ** Messages 
+     */ 
+    //  .message {}
+    //  .success {}
+    //  #login_error {}
+ 
+ 
+     /*
+     ** Button
+     */
+     .button.button-primary {
+       text-shadow: none; box-shadow: none; outline: none; border: none;
+       border-radius: 0;
+       background: var(--color--primary);
+       padding: 0.3rem 2.5rem;
+       font-size: 1rem; font-weight: bold;
+ 
+       &::after {
+         font-family: "Font Awesome 5 Pro"; 
+         font-weight: 900;
+         content: "\f054";
+         position: absolute;
+         padding-left: 10px;
+         display: inline-block;
+         vertical-align: middle;
+         opacity: 0;
+         top: 50%;
+         right: 1rem;
+         transform: translateY(-50%);
+       
+         transition: 0.3s opacity;
+         font-size: 0.7em;
+       }
+       
+ 
+       transition: 0.2s ease-in-out;
+       &:hover {
+         background: var(--color--dark-accent);
+         &::after { opacity: 1; }
+       }
+ 
+       &:focus {
+         outline: 2px solid white;
+         outline-offset: -5px;
+         background-color: var(--color--dark-accent);
+       }
+     }
+ }

@@ -1,0 +1,15 @@
+.editor-styles-wrapper .wp-block {
+  max-width: var(--responsive--default-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+.editor-styles-wrapper .wp-block[data-align=full], 
+.editor-styles-wrapper .wp-block.alignfull {
+  max-width: none;
+}
+
+@import "button/editor";
+@import "heading/editor";
+@import "list/editor";
+@import "spacer/editor";
+@import "table/editor";

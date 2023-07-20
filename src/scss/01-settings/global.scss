@@ -1,0 +1,125 @@
+/* Variables */
+
+body {  
+
+  /* Colors */
+  --color--white      : var(--wp--preset--color--base);
+  --color--black      : var(--wp--preset--color--contrast);
+  --color--grey       : var(--wp--preset--color--grey);
+
+  --color--foreground : var(--wp--preset--color--contrast);
+  --color--background : var(--wp--preset--color--base);
+  --color--primary    : var(--wp--preset--color--primary);
+  --color--secondary  : var(--wp--preset--color--secondary);
+  --color--accent     : var(--wp--custom--color--coral);
+
+  
+  /* Fonts */
+  --font--primary: var(--wp--preset--font-family--primary-font);
+  --font--secondary: var(--wp--preset--font-family--secondary-font);
+
+
+  /* Default link styling */
+  --link--color           : var(--wp--custom--color--link);
+  --link--color-visited   : var(--link--color);
+  --link--color-hover     : currentColor;
+  --link--color-active    : currentColor;
+  --link--font-weight     : 700;
+  --link--text-decoration : underline;
+  
+
+  /* Default button styling */
+  // colors
+  --button--color-text: var(--color--background);
+  --button--color-text-hover: var(--color--primary);
+  --button--color-background: var(--color--primary);
+  --button--color-background-hover: var(--color--background);
+  --button--color-border: var(--button--color--background);
+  --button--color-border-hover: var(--button--color-border);
+  // fonts
+  --button--line-height: 1;
+  --button--font-family: var(--font--secondary);
+  --button--font-size: 1rem;
+  --button--font-weight: 500;
+  --button--text-transform: none;
+  // border
+  --button--border-width: 1px;
+  --button--border-radius: 8px;
+  // spacing
+  --button--padding-vertical: 1.125rem;
+  --button--padding-horizontal: calc(1.2 * var(--button--padding-vertical));
+
+
+  /* Default form styling */
+  --form--font-family: var(--font--primary);
+  --form--font-size: 1;
+  --form--font-weight: 1;
+  --form--color-text: 1;
+  // fields
+  --form--border: 1;
+  --form--border-radius: 1;
+  --form--field-font-size: 1;
+  --form--field-font-family: 1;
+  --form--field-color-text: 1;
+  --form--field-color-background: 1;
+  --form--field-padding-vertical: 10px;
+  --form--field-padding-horizontal: calc(2 * var(--form--field-padding-vertical));
+
+  --form--field-color-background-focus: var(--form--field-color-background);
+  --form--field-border-color-focus: 1;
+  
+
+
+  /* Spacing */  
+  --space--xs : clamp(1.25rem, 2.5vw, 1.875rem);
+  --space--sm : clamp(1.875rem, 5vw, 3.75rem );
+  --space--md : clamp(3.125rem, 7.5vw, 5rem);
+  --space--lg : clamp(3.75rem, 8.75vw, 6.25rem);
+  --space--text : 0.625rem;
+
+
+  /* Container */
+  --content-width: var(--wp--style--global--content-size);
+  --wide-width: var(--wp--style--global--wide-size);
+  --content-width: min(90vw, var(--wp--style--global--content-size));
+  --wide-width: min(90vw, var(--wp--style--global--wide-size));
+}
+
+
+// Defaults
+body {
+  color: var(--color--foreground);
+  background-color: var(var(--color--background));
+  font-size: var(--wp--preset--font-size--regular);
+  font-family: var(--font--primary);
+}
+
+
+// Apply block widths
+.container,
+.editor-content > * {
+	max-width: var(--content-width);
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.editor-content > .alignwide {
+	max-width: var(--wide-width);
+}
+.editor-content > .alignfull {
+	max-width: none;
+}
+.editor-content > .alignleft {
+	float: left;
+	margin-right: 2rem;
+}
+.editor-content > .alignright {
+	float: right;
+	margin-left: 2rem;
+}
+
+
+// move?
+.wp-block-group.has-background,
+.wp-block-column.has-background { //pad column?
+	padding: 2rem 1.5rem; 
+}

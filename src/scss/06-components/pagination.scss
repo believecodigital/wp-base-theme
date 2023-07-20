@@ -1,0 +1,38 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 0.5rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pagination button {
+    background: transparent;
+    border: none;
+}
+
+.pagination a,
+.pagination span.current,
+.pagination button {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    line-height: 2em;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+.pagination a:visited {
+    color: var(--color--foreground);
+}
+
+.pagination span.current {
+    border-radius: 50%;
+    background-color: var(--color--black);
+    color: var(--color--white);
+}

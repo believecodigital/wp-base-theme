@@ -1,0 +1,24 @@
+{
+    "apiVersion": 2,
+    "name" : "example-afc-block",
+    "title": "Example Block",
+    "description": "An example of a Block using ACF Pro.",
+    "category": "media",
+    "icon": {
+        "foreground": "#f75255",
+        "src": "palmtree"
+    },
+    "keywords": ["ACF", "Pro"],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "color": {
+            "text": false,
+            "background": true
+        },
+        "align": false
+    },
+    "style": "file:./style.css"
+}

@@ -1,0 +1,22 @@
+.dog-block {
+    border: 1px double black;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+.dog-block dl {
+    padding: 0;
+}
+.dog-block dd, 
+.dog-block dt {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+.dog-details {
+    color: white;
+    padding: 2rem;
+}
+.dog-about {
+    padding: 2rem;
+    background-color: white;
+}

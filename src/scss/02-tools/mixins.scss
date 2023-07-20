@@ -1,0 +1,92 @@
+// Responsive breakpoints mixin
+@mixin add_variables( $view: frontend ) {
+
+	@if frontend == $view {
+
+		:root {
+			@content;
+		}
+	}
+
+	@if editor == $view {
+
+		:root,
+		body {
+			@content;
+		}
+	}
+}
+
+// Button style
+// - Applies button styles to blocks and elements that share them.
+@mixin button-style() {
+	display: inline-block;
+	border: var(--button--border-width) solid transparent;
+	border-color: var(--button--color-border);
+	border-radius: var(--button--border-radius);
+	cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	line-height: var(--button--line-height);
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	text-decoration: none;
+
+	// Standard Button Color Relationship Logic
+	&:not(:hover):not(:active):not(:focus) {
+
+		// Text colors
+		&:not(.has-text-color) {
+			color: var(--button--color-text);
+		}
+
+		// Background-colors
+		&:not(.has-background) {
+			background-color: var(--button--color-background);
+		}
+	}
+
+	// Hover Button color should match parent element foreground color
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--button--color-background-hover);
+		border-color: currentColor;
+		color: var(--button--color-text-hover);
+		border-color: var(--button--color-border-hover);
+	}
+
+	// Focus Button outline color should always match the current text color
+	&:focus {
+		outline-offset: -6px;
+		outline: 2px dotted currentColor;
+	}
+
+	// Disabled Button colors
+	&:disabled {
+		background-color: grey;
+		border-color: grey;
+		color: lightgrey;
+		opacity: 0.8;
+	}
+}
+
+
+@mixin innerblock-margin-clear($container) {
+
+	// Clear the top margin for the first-child.
+	> #{$container} > *:first-child {
+		margin-top: 0;
+	}
+
+	// Last child that is not the appender.
+	> #{$container} > *:last-child:not(.block-list-appender) {
+		margin-bottom: 0;
+	}
+
+	// When selected, the last item becomes the second last because of the appender.
+	&.has-child-selected > #{$container} > *:nth-last-child(2),
+	&.is-selected > #{$container} > *:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+}

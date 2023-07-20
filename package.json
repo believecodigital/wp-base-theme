@@ -1,0 +1,35 @@
+{
+  "name": "believeco",
+  "version": "1.0.0",
+  "description": "Base Theme.",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
+    "laravel-mix": "^6.0.39",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.5",
+    "sass-loader": "^12.3.0"
+  },
+  "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.31",
+    "@popperjs/core": "^2.11.0",
+    "dompurify": "^2.3.6",
+    "focus-trap-react": "^8.9.2",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

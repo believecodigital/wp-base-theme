@@ -1,0 +1,29 @@
+/* 
+ * Color Pallette 
+ *
+ * update default colors based on different backgrounds
+ */
+
+// light color
+.has-turquoise-background-color,
+.has-light-grey-background-color,
+.has-base-background-color {
+    &:not(.has-text-color){
+        color: var(--wp--preset--color--contrast);
+    }
+}
+
+// dark colors
+.has-primary-background-color,
+.has-dark-blue-background-color,
+.has-contrast-background-color {
+    &:not(.has-text-color){
+        color: var(--wp--preset--color--base);
+    }
+    --button--color-text: var(--color--primary);
+    --button--color-background: var(--color--secondary);
+    --button--color-text-hover: var(--button--color-background);
+    --button--color-background-hover: var(--button--color-text);
+    --button--color-border: var(--button--color--text);
+    --button--color-border-hover: var(--button--color--text-hover);
+}

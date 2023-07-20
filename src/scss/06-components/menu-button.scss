@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+# Menu Toggle
+--------------------------------------------------------------*/
+
+.menu-toggle {
+  display           : inline-block;
+  -moz-box-sizing   : border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing        : border-box;
+  cursor            : pointer;
+  color             : var(--color--foreground);
+  width             : 22px;
+  height            : 18px;
+  position          : relative;
+  background        : none;
+  border            : none;
+
+  .bottom-bar,
+  .middle-bar,
+  .top-bar {
+    display: block;
+    width                   : 22px;
+    height                  : 2px;
+    background-color        : var(--color--foreground);
+    -webkit-transition      : -webkit-transform 0.1s 0s ease-in-out,top 0.1s 0.1s ease-in-out;
+    -moz-transition         : -moz-transform 0.1s 0s ease-in-out,top 0.1s 0.1s ease-in-out;
+    -ms-transition          : -ms-transform 0.1s 0s ease-in-out,top 0.1s 0.1s ease-in-out;
+    -o-transition           : -o-transform 0.1s 0s ease-in-out,top 0.1s 0.1s ease-in-out;
+    transition              : transform 0.1s 0s ease-in-out,top 0.1s 0.1s ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin   : 50% 50%;
+    -ms-transform-origin    : 50% 50%;
+    -o-transform-origin     : 50% 50%;
+    transform-origin        : 50% 50%;
+    position                : absolute;
+    top                     : 0;
+    right                   : 0;
+  }
+
+  .middle-bar {
+    opacity           : 1;
+    visibility        : visible;
+    -webkit-transition: opacity 0s 0.15s linear;
+    -moz-transition   : opacity 0s 0.15s linear;
+    -ms-transition    : opacity 0s 0.15s linear;
+    -o-transition     : opacity 0s 0.15s linear;
+    transition        : opacity 0s 0.15s linear;
+    top               : 7px;
+  }
+
+  .bottom-bar {
+    top: 14px;
+  }
+}
+
+.menu-toggle[aria-expanded="true"] {
+  .top-bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    -ms-transform    : rotate(45deg);
+    -o-transform     : rotate(45deg);
+    transform        : rotate(45deg);
+    top              : 7px;
+  }
+
+  .middle-bar {
+    opacity   : 0;
+    visibility: none;
+  }
+
+  .bottom-bar {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    -ms-transform    : rotate(-45deg);
+    -o-transform     : rotate(-45deg);
+    transform        : rotate(-45deg);
+    top              : 7px;
+  }
+}

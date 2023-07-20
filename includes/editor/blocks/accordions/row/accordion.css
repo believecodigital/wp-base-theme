@@ -1,0 +1,27 @@
+
+.accordion-block summary {
+    list-style: none;
+    cursor: pointer;
+}
+.accordion-block summary::-webkit-details-marker {display: none; }
+
+details.accordion-block {
+    border-bottom: 1px solid var(--color--accent);
+}
+.accordion-block summary{
+    font-weight: 800;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.accordion-block summary::before {
+    font: var(--fa-font-solid);
+    content: "\002b";
+    color: var(--color--accent);
+    margin-right: 1rem;
+}
+.accordion-block[open] summary::before {
+    content: "\f068"
+}
+.accordion-block__inner {
+    padding-bottom: 1rem;
+}

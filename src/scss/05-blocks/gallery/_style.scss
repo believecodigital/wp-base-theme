@@ -1,0 +1,10 @@
+.wp-block-gallery {
+
+	margin: 0 auto;
+
+	.wp-block-image,
+	.blocks-gallery-item {
+		// On mobile and responsive viewports, we allow only 1 or 2 columns at the most.
+		width: calc((100% - var(--space--sm)) / 2);
+	}
+}

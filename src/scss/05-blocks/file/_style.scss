@@ -1,0 +1,19 @@
+.wp-block-file {
+    a {
+        color: var(--link-color);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    a.wp-block-file__button {
+        @include button-style();
+        display: inline-block;
+        background-color: var(--bg-color--medium);
+        font-weight: 500;
+    }
+	
+	a.wp-block-file__button:active,
+	a.wp-block-file__button:focus,
+	a.wp-block-file__button:hover {
+		opacity: inherit;
+	}
+}
