@@ -1,0 +1,62 @@
+.wp-block-acf-icon {
+    background-color: transparent !important;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon-block {
+    padding: 0.5rem 0;
+}
+
+.icon-block .icon-label {
+    color: inherit;
+    margin: 0.33em 0.2em;
+}
+
+.icon-block .icon-symbol {
+    vertical-align: middle;
+}
+
+
+.icon-symbol:not(.has-text-color) {
+    color: var(--color--accent);
+}
+
+.icon-position-before .icon-symbol,
+.icon-label,
+.icon-position-after .icon-symbol,
+.icon-label {
+    display: inline;
+}
+
+.icon-position-top,
+.icon-position-bottom {
+    display: inline-block;
+    text-align: center;
+}
+
+a.icon-link {
+    color: var(--link-color--hover);
+    display: inline-block;
+    text-decoration: none;
+}
+
+a.icon-link:hover .icon-label {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.icon-block.is-style-round .icon-symbol {
+    min-width: 1.75em;
+    min-height: 1.75em;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.icon-block.is-style-round .icon-symbol i {
+    line-height: 1.75em;
+}

@@ -1,0 +1,24 @@
+{
+    "apiVersion": 2,
+    "name" : "icon",
+    "title": "Icon",
+    "description": "Icon block with optional label",
+    "style": [ "file:./icon.css" ],
+    "category": "media",
+    "icon": {
+        "foreground": "#f75255",
+        "src": "info"
+    },
+    "supports": {
+        "align_text" : true,
+        "color": true,
+        "typography": {
+            "fontSize" : true
+        }
+    },
+    "keywords": ["icon", "symbol", "graphic"],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "icon.php"
+    }
+}
