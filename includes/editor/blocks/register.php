@@ -3,6 +3,8 @@
 namespace Believeco\Editor\Blocks;
 
 include(__DIR__ . "/accordions/register.php");
+include(__DIR__ . "/icon/register.php");
+include(__DIR__ . "/icon-group/register.php");
 // include(__DIR__ . "/example-acf-block/register.php");
 
 

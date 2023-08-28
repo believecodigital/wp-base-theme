@@ -123,3 +123,39 @@ body {
 .wp-block-column.has-background { //pad column?
 	padding: 2rem 1.5rem; 
 }
+
+p {
+  color: rgb(58, 98, 101);
+}
+
+.site-main-header, .site-primary-menu ul {
+  display: flex;
+}
+
+.logo {
+  max-width: 15rem;
+}
+
+/* Blog Styles */
+.blog-listings {
+  display: flex;
+}
+
+.blog-thumbnail, .blog-content {
+  margin-left: 0 !important;
+  margin-right: 0 !important;  
+}
+
+.blog-thumbnail {
+  max-width: 20rem;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000;
+
+  p {
+    color: #fff !important;
+  }
+}
+

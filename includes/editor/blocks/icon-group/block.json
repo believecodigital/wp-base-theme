@@ -1,0 +1,24 @@
+{
+    "apiVersion": 2,
+    "name" : "icon-group",
+    "title": "Group with Icon",
+    "description": "",
+    "style": [ "file:./icon-group.css" ],
+    "category": "layout",
+    "icon": {
+        "foreground": "#f75255",
+        "src": "info-outline"
+    },
+    "supports": {
+        "color": {
+            "text": false,
+            "background": true
+        },
+        "jsx": true
+    },
+    "keywords": ["icon", "symbol", "group"],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "icon-group.php"
+    }
+}

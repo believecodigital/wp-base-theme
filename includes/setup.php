@@ -79,26 +79,26 @@ add_action( 'after_setup_theme', 'Believeco\Setup\enable_theme_features' );
  * Set image sizes based on desktop container width
  */
 
-function update_default_image_sizes()
-{
-    $thumbnail 	=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 1/4;
-    $medium		=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 1/2;
-    $medium_lg 	=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 2/3;
-    $large		=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH');
-
-    //update existing sizes
-    update_option('thumbnail_crop', 0);
-    update_option('thumbnail_size_w', $thumbnail);
-    update_option('thumbnail_size_h', $thumbnail * 2);
-    update_option('medium_size_w', $medium);
-    update_option('medium_size_h', $medium * 2);
-    update_option('medium_large_size_w', $medium_lg);
-    update_option('medium_large_size_h', $medium_lg * 2);
-    update_option('large_size_w', $large);
-    update_option('large_size_h', $large * 2);
-}
-// set on theme activate to save on db calls
-add_action('switch_theme', 'my_switch_theme');
+ function update_default_image_sizes()
+ {
+     $thumbnail  =  (int) constant('Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 1/4;
+     $medium     =  (int) constant('Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 1/2;
+     $medium_lg  =  (int) constant('Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 2/3;
+     $large      =  (int) constant('Believeco\Setup\DESKTOP_CONTAINER_WIDTH');
+ 
+     //update existing sizes
+     update_option('thumbnail_crop', 0);
+     update_option('thumbnail_size_w', $thumbnail);
+     update_option('thumbnail_size_h', $thumbnail * 2);
+     update_option('medium_size_w', $medium);
+     update_option('medium_size_h', $medium * 2);
+     update_option('medium_large_size_w', $medium_lg);
+     update_option('medium_large_size_h', $medium_lg * 2);
+     update_option('large_size_w', $large);
+     update_option('large_size_h', $large * 2);
+ }
+ // set on theme activate to save on db calls
+ add_action('switch_theme', 'Believeco\Setup\update_default_image_sizes');
 
 
 

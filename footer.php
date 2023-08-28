@@ -8,9 +8,11 @@
 
     </main><!-- #main -->
     
-    <?php get_template_part('templates/partials/site-footer'); ?>
+    <?php get_template_part('templates/sections/site-footer'); ?>
     
-    <?php wp_footer(); ?>
+    <?php 
+    // wp_footer(); 
+    ?>
 
     </body>
 </html>

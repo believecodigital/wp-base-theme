@@ -1,0 +1,19 @@
+.editor-styles-wrapper .icon-group-block .wp-block {
+    margin: 0;
+  }
+  
+  .icon-group-block .acf-innerblocks-container {
+    display: flex;
+  }
+  
+  .icon-group-block.vertical .acf-innerblocks-container {
+    flex-direction: column;
+  }
+  
+  .icon-group-block.horizontal .icon-wrapper {
+    margin-right: 15px;
+  }
+  
+  .icon-group-block.vertical .icon-wrapper {
+    margin-bottom: 15px;
+  }
