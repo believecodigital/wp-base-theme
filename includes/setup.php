@@ -23,7 +23,7 @@ function register_menus()
         'footer_menu'  => __('Footer Menu', 'theme')
     ));
 }
-add_action( 'after_setup_theme', 'Believeco\Setup\register_menus', 0 );
+add_action( 'after_setup_theme', '\Believeco\Setup\register_menus', 0 );
 
 
 
@@ -43,7 +43,7 @@ function add_theme_assets()
     @$script_ver = filemtime(get_stylesheet_directory() . '/assets/js/main.js'); // cache buster
     wp_enqueue_script("theme", get_stylesheet_directory_uri()."/assets/js/main.js", false, $script_ver, true);
 }
-add_action('wp_enqueue_scripts', 'Believeco\Setup\add_theme_assets');
+add_action('wp_enqueue_scripts', '\Believeco\Setup\add_theme_assets');
  
  
  
@@ -63,7 +63,7 @@ function add_block_editor_assets()
         array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
     );
 }
-add_action( 'enqueue_block_editor_assets', 'Believeco\Setup\add_block_editor_assets' );
+add_action( 'enqueue_block_editor_assets', '\Believeco\Setup\add_block_editor_assets' );
 
 
 // Add theme supports
@@ -72,7 +72,7 @@ function enable_theme_features()
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
 }
-add_action( 'after_setup_theme', 'Believeco\Setup\enable_theme_features' );
+add_action( 'after_setup_theme', '\Believeco\Setup\enable_theme_features' );
 
 
 /**
@@ -81,10 +81,10 @@ add_action( 'after_setup_theme', 'Believeco\Setup\enable_theme_features' );
 
 function update_default_image_sizes()
 {
-    $thumbnail 	=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 1/4;
-    $medium		=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 1/2;
-    $medium_lg 	=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH') * 2/3;
-    $large		=  (int) constant('Believeco\DESKTOP_CONTAINER_WIDTH');
+    $thumbnail 	=  (int) constant('\Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 1/4;
+    $medium		=  (int) constant('\Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 1/2;
+    $medium_lg 	=  (int) constant('\Believeco\Setup\DESKTOP_CONTAINER_WIDTH') * 2/3;
+    $large		=  (int) constant('\Believeco\Setup\DESKTOP_CONTAINER_WIDTH');
 
     //update existing sizes
     update_option('thumbnail_crop', 0);
@@ -98,7 +98,7 @@ function update_default_image_sizes()
     update_option('large_size_h', $large * 2);
 }
 // set on theme activate to save on db calls
-add_action('switch_theme', 'my_switch_theme');
+add_action('switch_theme', '\Believeco\Setup\update_default_image_sizes');
 
 
 
@@ -115,9 +115,9 @@ function customize_image_sizes()
     //add new image sizes
     add_image_size('small', $small, $small * 2);
     add_image_size('hd', 1920, 1080);
-    add_image_size('retina', 2500, 2500);
+    add_image_size('retina', 2560, 2560);
 }
-add_action( 'after_setup_theme', 'Believeco\Setup\customize_image_sizes');
+add_action( 'after_setup_theme', '\Believeco\Setup\customize_image_sizes');
 
 
 
@@ -129,14 +129,14 @@ function add_custom_image_size_choices($sizes)
     $sizes['medium_large'] = __( "Medium Large" );
     return $sizes;
 }
-add_filter( 'image_size_names_choose', 'Believeco\Setup\add_custom_image_size_choices');
+add_filter( 'image_size_names_choose', '\Believeco\Setup\add_custom_image_size_choices');
 
 
 /** 
  * Add ACF Options page
  */
 
-add_action('acf/init', 'Believeco\Setup\add_theme_options_page');
+add_action('acf/init', '\Believeco\Setup\add_theme_options_page');
 function add_theme_options_page()
 {
     if ( ENABLE_THEME_OPTIONS_PAGE === true && function_exists('acf_add_options_page') ) 
